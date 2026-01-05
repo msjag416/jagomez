@@ -331,14 +331,21 @@
             </p>
 
             <div class="bg-white rounded-lg p-8 shadow-2xl max-w-lg mx-auto">
-                <!-- Switched back to Standard Form Submission for reliability -->
-                <!-- Removed AJAX fetch script to ensure CORS/Network errors do not block submission -->
-                <form action="https://formsubmit.co/d65d504c402f1757246b2c912fcf6426" method="POST">
+                <!-- Success Message (Hidden by default) -->
+                <div id="success-message" class="hidden flex flex-col items-center justify-center py-8">
+                    <div class="h-16 w-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-check text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Message Sent!</h3>
+                    <p class="text-gray-600">I'll be in touch shortly.</p>
+                </div>
+
+                <!-- Form -->
+                <form id="contact-form" action="https://formsubmit.co/d65d504c402f1757246b2c912fcf6426" method="POST">
                     <!-- Hidden Configurations -->
                     <input type="hidden" name="_subject" value="Resume Request - Canadian Remote Opportunity">
                     <input type="hidden" name="_captcha" value="false">
-                    <!-- Redirect back to portfolio after sending -->
-                    <input type="hidden" name="_next" value="https://msjag416.github.io/jagomez/">
+                    <!-- Note: We don't use _next here because JS handles the UI update -->
                     
                     <div class="mb-4 text-left">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
@@ -355,9 +362,14 @@
                         <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-corporateNavy" id="message" name="message" rows="3" placeholder="" required></textarea>
                     </div>
 
-                    <button class="w-full bg-corporateNavy text-white font-bold py-3 px-4 rounded hover:bg-slate-800 transition duration-300 flex justify-center items-center" type="submit">
-                        <span>Send</span>
-                        <i class="fa-solid fa-paper-plane ml-2"></i>
+                    <!-- Error Message (Hidden by default) -->
+                    <div id="error-message" class="hidden mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded relative" role="alert">
+                        <span class="block sm:inline">Something went wrong. Please try again.</span>
+                    </div>
+
+                    <button id="submit-btn" class="w-full bg-corporateNavy text-white font-bold py-3 px-4 rounded hover:bg-slate-800 transition duration-300 flex justify-center items-center" type="submit">
+                        <span id="btn-text">Send</span>
+                        <i id="btn-icon" class="fa-solid fa-paper-plane ml-2"></i>
                     </button>
                 </form>
                 
@@ -387,7 +399,50 @@
                     mobileMenu.classList.add('hidden');
                 });
             });
-            // Removed previous AJAX fetch listener to prevent Network Errors
+
+            // JavaScript Form Handling
+            const form = document.getElementById('contact-form');
+            const successMessage = document.getElementById('success-message');
+            const errorMessage = document.getElementById('error-message');
+            const submitBtn = document.getElementById('submit-btn');
+            const btnText = document.getElementById('btn-text');
+            const btnIcon = document.getElementById('btn-icon');
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // UI Loading State
+                submitBtn.disabled = true;
+                btnText.textContent = "Sending...";
+                btnIcon.classList.add('hidden');
+                errorMessage.classList.add('hidden');
+
+                const formData = new FormData(form);
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Success State
+                        form.classList.add('hidden');
+                        successMessage.classList.remove('hidden');
+                    } else {
+                        // Error State
+                        throw new Error('Form submission failed');
+                    }
+                })
+                .catch(error => {
+                    errorMessage.classList.remove('hidden');
+                    submitBtn.disabled = false;
+                    btnText.textContent = "Send";
+                    btnIcon.classList.remove('hidden');
+                });
+            });
         });
     </script>
 </body>
