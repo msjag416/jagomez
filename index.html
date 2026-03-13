@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JoAnne Andrea Gomez, RN - Clinical Utilization Review & Claims Adjudication</title>
-    <meta name="description" content="Professional portfolio for JoAnne Andrea Gomez, RN. Specializing in Clinical Utilization Review, Claims Adjudication, Forensic Documentation Audit, and Risk Mitigation.">
-    <meta name="keywords" content="Clinical Utilization Review, Claims Adjudication, Forensic Nurse Audit, Medical Necessity, Risk Management, Insurance Appeals, Catastrophic Injury Assessment, Disability Case Management, Policy Adherence, Trauma Consultant, Medical Case Management">
+    <title>JoAnne Andrea Gomez, RN - Healthcare AI Training Specialist</title>
+    <meta name="description" content="Professional portfolio for JoAnne Andrea Gomez, RN. Healthcare AI Training Specialist with 27+ years of critical care expertise. Specializing in medical AI annotation, clinical data validation, and healthcare NLP quality assurance.">
+    <meta name="keywords" content="Healthcare AI Trainer, Medical AI Annotation, Clinical Data Validation, NLP Healthcare, AI Training Specialist, Registered Nurse AI, Healthcare Machine Learning, Clinical AI Quality Assurance, Medical Documentation AI, Trauma Neuro ICU">
     <meta name="author" content="JoAnne Andrea Gomez">
 
     <!-- Fonts: Montserrat (Headings) and Lato (Body) -->
@@ -23,10 +23,11 @@
             theme: {
                 extend: {
                     colors: {
-                        corporateNavy: '#1a365d', // Deep Navy
-                        corporateSlate: '#64748b', // Slate Grey
-                        corporateLight: '#f8fafc', // Off White
-                        corporateBlue: '#2563eb', // Action Blue
+                        corporateNavy: '#1a365d',
+                        corporateSlate: '#64748b',
+                        corporateLight: '#f8fafc',
+                        corporateBlue: '#2563eb',
+                        accentTeal: '#0d9488',
                     },
                     fontFamily: {
                         sans: ['Lato', 'sans-serif'],
@@ -38,13 +39,11 @@
     </script>
 
     <style>
-        /* Smooth Scrolling & Offset for Fixed Header */
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 100px; /* Offsets scroll position so fixed header doesn't cover content */
+            scroll-padding-top: 100px;
         }
         
-        /* Custom Button Hover Transition */
         .btn-hover {
             transition: all 0.3s ease;
         }
@@ -53,9 +52,31 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
 
-        /* Form styling fix for iOS */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         input, textarea {
             -webkit-appearance: none;
+        }
+
+        .gradient-border {
+            position: relative;
+        }
+        .gradient-border::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #0d9488, #2563eb);
         }
     </style>
 </head>
@@ -66,15 +87,16 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20">
                 <div class="flex-shrink-0 flex items-center">
-                    <span class="font-heading font-bold text-xl text-corporateNavy tracking-tight">JAG <span class="text-corporateSlate font-light">- RN</span></span>
+                    <span class="font-heading font-bold text-xl text-corporateNavy tracking-tight">JAG <span class="text-accentTeal font-light">| AI + Clinical</span></span>
                 </div>
                 <div class="hidden md:ml-6 md:flex md:space-x-8 md:items-center">
                     <a href="#about" class="text-gray-600 hover:text-corporateNavy px-3 py-2 text-sm font-medium transition-colors">Profile</a>
+                    <a href="#why-me" class="text-gray-600 hover:text-corporateNavy px-3 py-2 text-sm font-medium transition-colors">Why Me</a>
                     <a href="#competencies" class="text-gray-600 hover:text-corporateNavy px-3 py-2 text-sm font-medium transition-colors">Expertise</a>
                     <a href="#experience" class="text-gray-600 hover:text-corporateNavy px-3 py-2 text-sm font-medium transition-colors">History</a>
-                    <a href="#contact" class="bg-corporateNavy text-white px-5 py-2 rounded-sm text-sm font-bold hover:bg-slate-800 transition-colors">Request CV</a>
+                    <a href="#publications" class="text-gray-600 hover:text-corporateNavy px-3 py-2 text-sm font-medium transition-colors">Published Work</a>
+                    <a href="#contact" class="bg-corporateNavy text-white px-5 py-2 rounded-sm text-sm font-bold hover:bg-slate-800 transition-colors">Get in Touch</a>
                 </div>
-                <!-- Mobile menu button -->
                 <div class="-mr-2 flex items-center md:hidden">
                     <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
                         <span class="sr-only">Open main menu</span>
@@ -88,39 +110,48 @@
         <div class="hidden md:hidden bg-white border-t" id="mobile-menu">
             <div class="pt-2 pb-3 space-y-1">
                 <a href="#about" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-corporateNavy hover:text-corporateNavy">Profile</a>
+                <a href="#why-me" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-corporateNavy hover:text-corporateNavy">Why Me</a>
                 <a href="#competencies" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-corporateNavy hover:text-corporateNavy">Expertise</a>
                 <a href="#experience" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-corporateNavy hover:text-corporateNavy">History</a>
-                <a href="#contact" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-corporateNavy font-bold">Request CV</a>
+                <a href="#publications" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-corporateNavy hover:text-corporateNavy">Published Work</a>
+                <a href="#contact" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-corporateNavy font-bold">Get in Touch</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="relative bg-corporateNavy pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <!-- Abstract geometric background decoration -->
         <div class="absolute inset-0 opacity-10">
              <svg class="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                  <path d="M0 100 C 20 0 50 0 100 100 Z" fill="white" />
              </svg>
         </div>
+        <!-- Subtle grid pattern overlay for tech feel -->
+        <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle, rgba(255,255,255,0.3) 1px, transparent 1px); background-size: 30px 30px;"></div>
         
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-accentTeal/20 text-teal-200 mb-8 tracking-wide">
+                <i class="fa-solid fa-microchip mr-2"></i> Healthcare AI Training Specialist
+            </div>
             <h1 class="text-4xl tracking-tight font-heading font-bold text-white sm:text-5xl md:text-6xl mb-6">
                 JoAnne Andrea Gomez, RN
             </h1>
-            <p class="mt-4 max-w-2xl mx-auto text-xl text-blue-100 font-light tracking-wide">
-                Clinical Utilization Review | Medical Case Management | Claims Adjudication
+            <p class="mt-4 max-w-3xl mx-auto text-xl text-blue-100 font-light tracking-wide">
+                27 Years of Critical Care Expertise. Now Training the AI That Will Support the Next Generation of Clinicians.
             </p>
             <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-300">
-                Leveraging 25+ years of high-acuity Trauma & Neuro expertise for precise claims analysis, risk mitigation, and evidence-based adjudication.
+                Medical AI Annotation &bull; Clinical Data Validation &bull; Healthcare NLP Quality Assurance &bull; RLHF Domain Expert
             </p>
-            <div class="mt-10 mb-10">
-                <a href="#contact" class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-sm text-corporateNavy bg-white hover:bg-blue-50 md:py-4 md:text-lg md:px-10 btn-hover">
-                    Contact to Request Resume
+            <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center mb-10">
+                <a href="#contact" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-sm text-corporateNavy bg-white hover:bg-blue-50 md:py-4 md:text-lg md:px-10 btn-hover">
+                    Get in Touch
+                </a>
+                <a href="#competencies" class="inline-flex items-center justify-center px-8 py-3 border-2 border-white/30 text-base font-medium rounded-sm text-white hover:bg-white/10 md:py-4 md:text-lg md:px-10 btn-hover">
+                    View Expertise
                 </a>
             </div>
             
-            <!-- Hero Image Added Here -->
+            <!-- Hero Image -->
             <div class="flex justify-center">
                 <img src="hero.jpg" alt="JoAnne Andrea Gomez" class="rounded-full shadow-2xl border-4 border-white/20 w-64 md:w-80 aspect-square object-cover" onerror="this.src='https://placehold.co/400x400/1a365d/ffffff?text=JAG'">
             </div>
@@ -130,34 +161,68 @@
     <!-- About Section -->
     <section id="about" class="py-16 bg-white overflow-hidden">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Removed grid and image placeholder, now full width text for clarity -->
-            <div>
-                <h2 class="text-3xl font-heading font-bold text-slate-900 mb-6 border-l-4 border-corporateNavy pl-4">
+            <div class="fade-in">
+                <h2 class="text-3xl font-heading font-bold text-slate-900 mb-6 border-l-4 border-accentTeal pl-4">
                     Professional Profile
                 </h2>
                 <div class="prose prose-lg text-gray-600 leading-relaxed">
                     <p class="mb-4">
-                        I am a Canadian Registered Nurse transitioning 27+ years of clinical intensity into corporate efficiency. My extensive background in Trauma-Neuro ICU has honed a specific skill set: the ability to dissect complex medical files rapidly and accurately to distinguish valid clinical needs from systemic inefficiencies.
+                        I'm a Canadian Registered Nurse with 27+ years of frontline critical care experience in Trauma-Neuro and Medical-Surgical ICUs at two of Toronto's top teaching hospitals. I've spent my career making fast, high-stakes clinical decisions under pressure, and I'm now channeling that expertise into something new: making healthcare AI smarter, safer, and more clinically accurate.
                     </p>
                     <p class="mb-4">
-                        I specialize in forensic clinical review. I leverage my operational knowledge of hospital systems to identify inconsistencies in treatment plans and validate medical necessity. I bridge the gap between clinical reality and policy guidelines, ensuring that every claim adjudication is backed by irrefutable medical evidence to minimize risk.
+                        My background gives me something most AI trainers don't have. I've managed complex neuro-trauma cases involving ICP monitoring, stroke protocols, multi-system failure, and end-of-life decision-making. When I review AI-generated medical content, I don't just check for factual accuracy. I evaluate clinical reasoning, contextual appropriateness, and whether the output would hold up in a real patient care scenario.
+                    </p>
+                    <p class="mb-4">
+                        I also bring strong writing and analytical skills. I hold dual bachelor's degrees in Psychology and English, I'm a published author of two books, and I write regularly on healthcare topics for Medium. That combination of clinical depth, structured writing, and critical thinking is exactly what healthcare AI companies need to train models that clinicians can trust.
                     </p>
                     <p>
-                        I hold degrees in Psychology and English alongside my nursing credentials, providing the unique ability to translate dense clinical data into clear, legally defensible stakeholder communication.
+                        I'm actively pursuing remote AI training and annotation roles where my clinical expertise directly improves the quality and safety of medical AI systems.
                     </p>
                 </div>
                 
                 <!-- Credential Badges -->
                 <div class="mt-8 flex flex-wrap gap-3">
-                    <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-slate-100 text-slate-800">
+                    <span class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-teal-50 text-teal-800 border border-teal-200">
+                        <i class="fa-solid fa-robot mr-2"></i> Healthcare AI Trainer
+                    </span>
+                    <span class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-slate-100 text-slate-800">
                         <i class="fa-solid fa-user-nurse mr-2"></i> RN (CNO Active)
                     </span>
-                    <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-slate-100 text-slate-800">
-                        <i class="fa-solid fa-brain mr-2"></i> Trauma & Neuro Exp.
+                    <span class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-slate-100 text-slate-800">
+                        <i class="fa-solid fa-brain mr-2"></i> 27+ Yrs Trauma-Neuro ICU
                     </span>
-                    <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-slate-100 text-slate-800">
-                        <i class="fa-solid fa-magnifying-glass-chart mr-2"></i> Claims & Risk Analysis
+                    <span class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-slate-100 text-slate-800">
+                        <i class="fa-solid fa-book mr-2"></i> Published Author
                     </span>
+                    <span class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-slate-100 text-slate-800">
+                        <i class="fa-solid fa-pen-nib mr-2"></i> Medical Writer
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Me Section -->
+    <section id="why-me" class="py-16 bg-gradient-to-b from-slate-50 to-white border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="fade-in">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-heading font-bold text-slate-900 mb-4">Why a Critical Care RN for AI Training?</h2>
+                    <p class="text-xl text-gray-500 max-w-2xl mx-auto">Healthcare AI is only as good as the clinical expertise behind its training data.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-8 md:p-10">
+                    <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
+                        <p>
+                            AI models trained on medical data need human reviewers who can catch what algorithms miss. A model might generate an answer that looks correct on paper but would raise a red flag for any experienced clinician. That's where I come in. I know what a real clinical assessment looks like because I've done thousands of them.
+                        </p>
+                        <p>
+                            I've worked across Epic, Metavision, and Cerner EMR platforms, so I understand how clinical documentation is structured and where gaps tend to appear. I know the difference between a textbook answer and what happens at the bedside. That kind of judgment is hard to teach, and it's exactly what RLHF (Reinforcement Learning from Human Feedback) processes depend on.
+                        </p>
+                        <p>
+                            My writing background means I can also produce high-quality prompt responses, evaluate the quality of AI-generated medical text, and provide detailed rationale for my annotations. I don't just flag something as wrong. I explain why it's wrong, what the correct clinical reasoning should be, and how the output could mislead a clinician or harm a patient.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -166,61 +231,87 @@
     <!-- Core Competencies -->
     <section id="competencies" class="py-16 bg-corporateLight">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-heading font-bold text-slate-900">Transferable Clinical Expertise</h2>
-                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">Applying high-acuity judgment to the Canadian remote healthcare market.</p>
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl font-heading font-bold text-slate-900">AI Training Competencies</h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">Clinical expertise mapped directly to healthcare AI training workflows.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Card 1: Medical Necessity -->
-                <div class="bg-white p-8 rounded-sm shadow-sm border-t-4 border-corporateNavy hover:shadow-md transition-shadow">
+                <!-- Card 1: Medical AI Annotation -->
+                <div class="fade-in bg-white p-8 rounded-sm shadow-sm border-t-4 border-accentTeal hover:shadow-md transition-shadow">
                     <div class="flex items-center mb-4">
-                        <div class="flex-shrink-0 bg-blue-50 p-3 rounded-full">
-                            <i class="fa-solid fa-clipboard-check text-2xl text-corporateNavy"></i>
+                        <div class="flex-shrink-0 bg-teal-50 p-3 rounded-full">
+                            <i class="fa-solid fa-tags text-2xl text-accentTeal"></i>
                         </div>
-                        <h3 class="ml-4 text-xl font-bold text-slate-900">Medical Necessity & Utilization Review</h3>
+                        <h3 class="ml-4 text-xl font-bold text-slate-900">Medical AI Annotation & Labeling</h3>
                     </div>
                     <p class="text-gray-600">
-                        I possess a forensic ability to distinguish between valid medical necessity and operational inefficiency. My background in analyzing "Access Block" and hospital flow allows me to identify when a patient’s length of stay is driven by clinical need versus administrative delay. I ensure insurers only pay for acute care when acute criteria are actually met, protecting the bottom line from system-based over-billing.
+                        I can classify and label medical data with the precision that comes from 27 years of clinical documentation. Whether it's identifying diagnoses in clinical notes, tagging medication interactions, or labeling symptom severity in patient records, my annotations are grounded in frontline experience, not textbook theory. I understand the context behind clinical shorthand, non-standard charting, and the nuances that trip up reviewers without ICU-level experience.
                     </p>
                 </div>
 
-                <!-- Card 2: Forensic Documentation -->
-                <div class="bg-white p-8 rounded-sm shadow-sm border-t-4 border-corporateNavy hover:shadow-md transition-shadow">
+                <!-- Card 2: Clinical Validation -->
+                <div class="fade-in bg-white p-8 rounded-sm shadow-sm border-t-4 border-accentTeal hover:shadow-md transition-shadow">
                     <div class="flex items-center mb-4">
-                        <div class="flex-shrink-0 bg-blue-50 p-3 rounded-full">
-                            <i class="fa-solid fa-magnifying-glass text-2xl text-corporateNavy"></i>
+                        <div class="flex-shrink-0 bg-teal-50 p-3 rounded-full">
+                            <i class="fa-solid fa-clipboard-check text-2xl text-accentTeal"></i>
                         </div>
-                        <h3 class="ml-4 text-xl font-bold text-slate-900">Forensic Documentation Audit</h3>
+                        <h3 class="ml-4 text-xl font-bold text-slate-900">Clinical Output Validation & RLHF</h3>
                     </div>
                     <p class="text-gray-600">
-                        In claims adjudication, ambiguity leads to revenue loss. I apply ICU-level rigor to medical record reviews, spotting inconsistencies that standard reviews miss. I can rapidly verify if the charted interventions match the billed diagnosis codes. If the documentation does not support the claim, I have the clinical authority to articulate exactly why it should be denied or flagged for review.
+                        When an AI model generates a clinical response, someone with deep domain knowledge needs to evaluate whether it's safe, accurate, and contextually appropriate. I evaluate AI-generated medical content against real-world clinical standards. I can rank model outputs, identify hallucinations in medical reasoning, and provide the structured feedback that RLHF processes require to improve model performance in healthcare-specific applications.
                     </p>
                 </div>
 
-                <!-- Card 3: Complex Case -->
-                <div class="bg-white p-8 rounded-sm shadow-sm border-t-4 border-corporateNavy hover:shadow-md transition-shadow">
+                <!-- Card 3: Prompt Engineering -->
+                <div class="fade-in bg-white p-8 rounded-sm shadow-sm border-t-4 border-accentTeal hover:shadow-md transition-shadow">
                     <div class="flex items-center mb-4">
-                        <div class="flex-shrink-0 bg-blue-50 p-3 rounded-full">
-                            <i class="fa-solid fa-user-injured text-2xl text-corporateNavy"></i>
+                        <div class="flex-shrink-0 bg-teal-50 p-3 rounded-full">
+                            <i class="fa-solid fa-terminal text-2xl text-accentTeal"></i>
                         </div>
-                        <h3 class="ml-4 text-xl font-bold text-slate-900">Complex Case & Catastrophic Claims</h3>
+                        <h3 class="ml-4 text-xl font-bold text-slate-900">Healthcare Prompt Engineering & QA</h3>
                     </div>
                     <p class="text-gray-600">
-                        High-value claims in Trauma and Neuro require an adjudicator who understands the nuance of catastrophic injury. My 25+ years in high-acuity settings enable me to evaluate complex treatment plans, experimental therapies, and rehabilitation potential with precision. I assess whether a proposed treatment is the standard of care or an unnecessary cost, ensuring resources are allocated correctly for long-term disability cases.
+                        My dual degrees in Psychology and English, combined with years of professional writing, give me a strong foundation in crafting precise, clinically accurate prompts. I can design medical scenario prompts that test AI models on edge cases, write gold-standard reference responses, and evaluate whether model outputs meet clinical documentation standards. I understand how to structure questions that expose model weaknesses in medical reasoning.
                     </p>
                 </div>
 
-                <!-- Card 4: Remote Workflow -->
-                <div class="bg-white p-8 rounded-sm shadow-sm border-t-4 border-corporateNavy hover:shadow-md transition-shadow">
+                <!-- Card 4: Domain Expertise -->
+                <div class="fade-in bg-white p-8 rounded-sm shadow-sm border-t-4 border-accentTeal hover:shadow-md transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0 bg-teal-50 p-3 rounded-full">
+                            <i class="fa-solid fa-heart-pulse text-2xl text-accentTeal"></i>
+                        </div>
+                        <h3 class="ml-4 text-xl font-bold text-slate-900">Deep Clinical Domain Expertise</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        My specializations span neurological assessment (GCS, pupil reactivity, ICP monitoring), stroke protocols (tPA administration, NIHSS scoring), ventilator management, hemodynamic monitoring, sepsis identification, and critical care pharmacology. I've worked across Epic, Metavision, and Cerner EMR systems. This breadth and depth of clinical knowledge allows me to evaluate AI outputs across multiple medical specialties with authority.
+                    </p>
+                </div>
+
+                <!-- Card 5: Medical Writing -->
+                <div class="fade-in bg-white p-8 rounded-sm shadow-sm border-t-4 border-corporateNavy hover:shadow-md transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0 bg-blue-50 p-3 rounded-full">
+                            <i class="fa-solid fa-pen-fancy text-2xl text-corporateNavy"></i>
+                        </div>
+                        <h3 class="ml-4 text-xl font-bold text-slate-900">Medical & Healthcare Writing</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        I'm a published author and active medical writer on Medium, covering topics from workplace psychology to AI in healthcare. I can produce clear, structured, SEO-optimized medical content and evaluate AI-generated text for accuracy, tone, readability, and clinical safety. My writing background is a direct asset for AI companies that need subject matter experts who can articulate complex medical reasoning in written form.
+                    </p>
+                </div>
+
+                <!-- Card 6: Remote Workflow -->
+                <div class="fade-in bg-white p-8 rounded-sm shadow-sm border-t-4 border-corporateNavy hover:shadow-md transition-shadow">
                     <div class="flex items-center mb-4">
                         <div class="flex-shrink-0 bg-blue-50 p-3 rounded-full">
                             <i class="fa-solid fa-laptop-medical text-2xl text-corporateNavy"></i>
                         </div>
-                        <h3 class="ml-4 text-xl font-bold text-slate-900">Remote Workflow & Digital Assessment</h3>
+                        <h3 class="ml-4 text-xl font-bold text-slate-900">Remote-Ready & Tech-Fluent</h3>
                     </div>
                     <p class="text-gray-600">
-                        I offer more than just clinical knowledge; I bring operational expertise in remote systems. Having designed workflows for virtual nursing and remote monitoring, I am technologically fluent and disciplined in independent environments. I can navigate electronic medical records and claims software efficiently, ensuring seamless processing and communication without the need for micromanagement.
+                        I've designed virtual nursing workflows and remote monitoring systems through ProRN Inc., my healthcare consulting company. I'm experienced with annotation platforms, comfortable working independently in distributed teams, and accustomed to meeting deadlines without supervision. I manage multiple websites, work daily with AI tools, and adapt quickly to new digital platforms and processes.
                     </p>
                 </div>
             </div>
@@ -230,61 +321,90 @@
     <!-- Experience Section -->
     <section id="experience" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-heading font-bold text-slate-900 mb-10 border-l-4 border-corporateNavy pl-4">
-                Professional History
+            <h2 class="text-3xl font-heading font-bold text-slate-900 mb-10 border-l-4 border-accentTeal pl-4 fade-in">
+                Clinical Foundation
             </h2>
 
             <div class="relative border-l-2 border-gray-200 ml-4 space-y-12">
                 
                 <!-- Role 1 -->
-                <div class="relative pl-8">
-                    <div class="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-corporateNavy"></div>
+                <div class="relative pl-8 fade-in">
+                    <div class="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-accentTeal"></div>
                     <div>
-                        <h3 class="text-xl font-bold text-slate-900">Clinical Case Review & Recovery Specialist</h3>
-                        <div class="text-corporateSlate font-medium mb-2">Toronto Cosmetic Surgery Clinic | 2012 – Present</div>
-                        <ul class="list-disc list-outside ml-4 text-gray-600 space-y-2 mt-3">
-                            <li><strong>Relevance to Liability & Risk Management:</strong> Managed post-operative recovery to identify early complications, directly mitigating facility liability and preventing costly clinical readmissions. Coordinated patient compliance protocols, ensuring adherence to discharge instructions to reduce malpractice risk.</li>
-                            <li>Acted as a liaison between surgeons and patients, aligning clinical outcomes with recovery goals.</li>
-                        </ul>
+                        <h3 class="text-xl font-bold text-slate-900">Founder & Healthcare Consultant</h3>
+                        <div class="text-corporateSlate font-medium mb-2">ProRN Inc. | Toronto | Ongoing</div>
+                        <p class="text-gray-600 mt-3">
+                            Founded a healthcare consulting company focused on virtual nursing program design, provincial float pool implementation, and clinical workflow optimization for Canadian healthcare systems. Designed remote monitoring workflows and digital care delivery models. This work demonstrates the ability to operate independently, manage complex projects, and bridge clinical practice with technology solutions.
+                        </p>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="text-xs font-medium px-2.5 py-1 rounded bg-teal-50 text-teal-700">Virtual Care Design</span>
+                            <span class="text-xs font-medium px-2.5 py-1 rounded bg-teal-50 text-teal-700">Remote Workflows</span>
+                            <span class="text-xs font-medium px-2.5 py-1 rounded bg-teal-50 text-teal-700">Healthcare Consulting</span>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Role 2 -->
-                <div class="relative pl-8">
+                <div class="relative pl-8 fade-in">
                     <div class="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-corporateNavy"></div>
                     <div>
                         <h3 class="text-xl font-bold text-slate-900">Interim Critical Care Consultant (Travel Nurse)</h3>
-                        <div class="text-corporateSlate font-medium mb-2">911 Nurses GTA Staffing Agency (Assignments in NB & NS) | 2023 – 2025</div>
-                        <ul class="list-disc list-outside ml-4 text-gray-600 space-y-2 mt-3">
-                            <li><strong>Relevance to Policy Adherence & Auditing:</strong> Rapidly integrated into diverse hospital systems across multiple provinces, auditing patient flow and ALC (Alternate Level of Care) status. This demonstrates the ability to audit and apply different policy frameworks accurately—a core requirement for reviewing claims across different jurisdictions.</li>
-                        </ul>
+                        <div class="text-corporateSlate font-medium mb-2">911 Nurses GTA Staffing Agency (NB & NS Assignments) | 2023 – 2025</div>
+                        <p class="text-gray-600 mt-3">
+                            Deployed to critical care units across multiple provinces, rapidly integrating into diverse hospital systems and EMR platforms. Assessed patient acuity, audited clinical documentation, and managed complex cases across different policy frameworks. This adaptability to varied clinical environments and documentation systems directly translates to evaluating AI outputs across different medical contexts and specialties.
+                        </p>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 text-slate-700">Multi-System EMR</span>
+                            <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 text-slate-700">Cross-Provincial Practice</span>
+                            <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 text-slate-700">Rapid Adaptation</span>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Role 3 -->
-                <div class="relative pl-8">
+                <div class="relative pl-8 fade-in">
                     <div class="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-corporateNavy"></div>
                     <div>
                         <h3 class="text-xl font-bold text-slate-900">Trauma & Neuro-Critical Care RN</h3>
                         <div class="text-corporateSlate font-medium mb-2">St. Michael's Hospital, Toronto | 2009 – 2021</div>
-                        <ul class="list-disc list-outside ml-4 text-gray-600 space-y-2 mt-3">
-                            <li><strong>Relevance to Catastrophic Injury Assessment:</strong> Managed high-complexity neuro-trauma cases involving multi-system failure. Expert in interpreting subtle neurological changes and validating the medical necessity of intensive interventions. This deep clinical experience allows for precise review of catastrophic injury claims and long-term disability files.</li>
-                            <li>12 years of expertise in taking care of trauma and neuro-trauma patients, providing the critical judgment necessary to guide distressed callers through medical crises.</li>
-                        </ul>
+                        <p class="text-gray-600 mt-3">
+                            12 years managing the most complex neuro-trauma cases in one of Canada's leading Level 1 trauma centres. Specialized in neurological assessment (GCS, ICP monitoring, EVD management), stroke care (tPA administration, NIHSS scoring), and multi-system critical care. Documented clinical findings in Epic EMR with the precision required for legal and insurance review. This deep expertise is the clinical foundation for evaluating AI-generated medical content in neurology, trauma, and critical care domains.
+                        </p>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 text-slate-700">Neuro-Trauma</span>
+                            <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 text-slate-700">Stroke Protocols</span>
+                            <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 text-slate-700">ICP Management</span>
+                            <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 text-slate-700">Epic EMR</span>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Role 4 -->
-                <div class="relative pl-8">
+                <div class="relative pl-8 fade-in">
                     <div class="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-corporateNavy"></div>
                     <div>
                         <h3 class="text-xl font-bold text-slate-900">ICU Nurse, Medical-Surgical ICU</h3>
-                        <div class="text-corporateSlate font-medium mb-2">Toronto Western Hospital - UHN | 2001 – 2008</div>
-                        <ul class="list-disc list-outside ml-4 text-gray-600 space-y-2 mt-3">
-                            <li>Managed comprehensive care for critically ill patients within the Medical-Surgical Intensive Care Unit.</li>
-                            <li>Handled complex medical and surgical patient caseloads requiring advanced hemodynamic monitoring and therapeutic interventions.</li>
-                            <li>Routinely audited patient charts for incomplete documentation to ensure continuity of care, developing the attention to detail required to spot billing discrepancies and charting errors.</li>
-                        </ul>
+                        <div class="text-corporateSlate font-medium mb-2">Toronto Western Hospital (UHN) | 2001 – 2008</div>
+                        <p class="text-gray-600 mt-3">
+                            Managed comprehensive critical care for complex medical and surgical patients requiring advanced hemodynamic monitoring, ventilator management, and multi-drug therapeutic interventions. Routinely audited patient charts for documentation accuracy and completeness, building the detail-oriented review skills that now apply directly to medical AI annotation and clinical data validation.
+                        </p>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 text-slate-700">Med-Surg ICU</span>
+                            <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 text-slate-700">Hemodynamic Monitoring</span>
+                            <span class="text-xs font-medium px-2.5 py-1 rounded bg-slate-100 text-slate-700">Metavision & Cerner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Role 5: Cosmetic Surgery -->
+                <div class="relative pl-8 fade-in">
+                    <div class="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-corporateSlate"></div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900">Clinical Case Review & Recovery Specialist</h3>
+                        <div class="text-corporateSlate font-medium mb-2">Toronto Cosmetic Surgery Clinic | 2012 – Present</div>
+                        <p class="text-gray-600 mt-3">
+                            Managed post-operative patient recovery, identified early complications, and coordinated compliance protocols. Acted as a liaison between surgeons and patients, translating complex medical information into clear communication. This role reinforces the ability to bridge clinical expertise with accessible explanation, a core requirement for writing AI training rationale and gold-standard responses.
+                        </p>
                     </div>
                 </div>
 
@@ -292,32 +412,109 @@
         </div>
     </section>
 
-    <!-- Education & Credentials -->
-    <section class="py-16 bg-slate-50 border-t border-slate-200">
+    <!-- Publications Section -->
+    <section id="publications" class="py-16 bg-corporateLight border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-heading font-bold text-slate-900 mb-8 text-center">Credentials & Licensure</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                <div class="bg-white p-6 rounded-sm shadow-sm">
-                    <i class="fa-solid fa-id-card text-3xl text-corporateSlate mb-4"></i>
-                    <h4 class="font-bold text-slate-900">Licensure</h4>
-                    <p class="text-gray-600 mt-2">Registered Nurse: College of Nurses of Ontario (Active)</p>
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl font-heading font-bold text-slate-900">Published Work & Writing</h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">Proof of structured thinking, clear communication, and subject matter authority.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Book 1 -->
+                <div class="fade-in bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow">
+                    <div class="bg-corporateNavy p-6 text-center">
+                        <i class="fa-solid fa-book text-4xl text-white/80"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">Burnout to Balance</h3>
+                        <p class="text-sm text-corporateSlate mb-3">Your 8-Step Guide to Thriving in a Messy Workplace</p>
+                        <p class="text-gray-600 text-sm">Published book on workplace psychology and burnout recovery. Demonstrates the ability to synthesize clinical experience and psychological research into structured, evidence-informed content.</p>
+                        <a href="https://www.amazon.ca/s?k=Burnout+to+Balance+JoAnne+Gomez" target="_blank" rel="noopener" class="inline-block mt-4 text-sm font-medium text-corporateBlue hover:underline">View on Amazon &rarr;</a>
+                    </div>
                 </div>
 
-                <div class="bg-white p-6 rounded-sm shadow-sm">
-                    <i class="fa-solid fa-certificate text-3xl text-corporateSlate mb-4"></i>
+                <!-- Book 2 -->
+                <div class="fade-in bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow">
+                    <div class="bg-corporateNavy p-6 text-center">
+                        <i class="fa-solid fa-book text-4xl text-white/80"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">Stronger Than You Think</h3>
+                        <p class="text-sm text-corporateSlate mb-3">A Guide for Teens Overcoming Anxiety and Childhood Trauma</p>
+                        <p class="text-gray-600 text-sm">Published book applying psychology to adolescent mental health. Shows the capacity to adapt complex clinical and psychological concepts for different audiences, a key skill for writing varied AI training content.</p>
+                        <a href="https://www.amazon.ca/s?k=Stronger+Than+You+Think+JoAnne+Gomez" target="_blank" rel="noopener" class="inline-block mt-4 text-sm font-medium text-corporateBlue hover:underline">View on Amazon &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Medium -->
+                <div class="fade-in bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow">
+                    <div class="bg-accentTeal p-6 text-center">
+                        <i class="fa-brands fa-medium text-4xl text-white/80"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">Medium Publication</h3>
+                        <p class="text-sm text-corporateSlate mb-3">@msjag416</p>
+                        <p class="text-gray-600 text-sm">Regular articles covering healthcare systems, workplace psychology, AI in healthcare, and media psychology. Demonstrates consistent, high-quality written output and the ability to produce clear, SEO-optimized content on complex topics.</p>
+                        <a href="https://medium.com/@msjag416" target="_blank" rel="noopener" class="inline-block mt-4 text-sm font-medium text-corporateBlue hover:underline">Read on Medium &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Credentials -->
+    <section class="py-16 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-heading font-bold text-slate-900 mb-8 text-center fade-in">Credentials & Education</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div class="fade-in bg-slate-50 p-6 rounded-sm shadow-sm">
+                    <i class="fa-solid fa-id-card text-3xl text-accentTeal mb-4"></i>
+                    <h4 class="font-bold text-slate-900">Licensure</h4>
+                    <p class="text-gray-600 mt-2">Registered Nurse</p>
+                    <p class="text-gray-600">College of Nurses of Ontario (Active)</p>
+                </div>
+
+                <div class="fade-in bg-slate-50 p-6 rounded-sm shadow-sm">
+                    <i class="fa-solid fa-certificate text-3xl text-accentTeal mb-4"></i>
                     <h4 class="font-bold text-slate-900">Certifications</h4>
                     <p class="text-gray-600 mt-2">ACLS (Valid to 2027)</p>
                     <p class="text-gray-600">BLS (Valid to 2026)</p>
                     <p class="text-gray-600">PALS (Valid to 2027)</p>
+                    <p class="text-gray-600">Critical Care Nursing (Humber College)</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-sm shadow-sm">
-                    <i class="fa-solid fa-university text-3xl text-corporateSlate mb-4"></i>
+                <div class="fade-in bg-slate-50 p-6 rounded-sm shadow-sm">
+                    <i class="fa-solid fa-university text-3xl text-accentTeal mb-4"></i>
                     <h4 class="font-bold text-slate-900">Education</h4>
-                    <p class="text-gray-600 mt-2">Certificate in Critical Care Nursing (Humber College)</p>
-                    <p class="text-gray-600">B.A. Psychology & B.A. English (University of Nebraska)</p>
+                    <p class="text-gray-600 mt-2">B.A. Psychology</p>
+                    <p class="text-gray-600">B.A. English</p>
+                    <p class="text-gray-600 text-sm mt-1">University of Nebraska</p>
+                    <p class="text-gray-600 mt-2">Nursing Diploma</p>
+                    <p class="text-gray-600 text-sm">George Brown College</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech & Tools -->
+    <section class="py-12 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-xl font-heading font-bold text-slate-900 mb-6 text-center fade-in">Systems & Tools</h3>
+            <div class="flex flex-wrap justify-center gap-3 fade-in">
+                <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-slate-700 border border-slate-200">Epic EMR</span>
+                <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-slate-700 border border-slate-200">Metavision</span>
+                <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-slate-700 border border-slate-200">Cerner</span>
+                <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-slate-700 border border-slate-200">Claude AI</span>
+                <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-slate-700 border border-slate-200">ChatGPT</span>
+                <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-slate-700 border border-slate-200">Google AI Studio</span>
+                <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-slate-700 border border-slate-200">GitHub Pages</span>
+                <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-slate-700 border border-slate-200">Netlify</span>
+                <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-slate-700 border border-slate-200">HTML/CSS</span>
+                <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-slate-700 border border-slate-200">SEO & Schema Markup</span>
+                <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-slate-700 border border-slate-200">WordPress</span>
+                <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-slate-700 border border-slate-200">Google Search Console</span>
             </div>
         </div>
     </section>
@@ -325,13 +522,13 @@
     <!-- Contact / CTA -->
     <section id="contact" class="bg-corporateNavy py-20">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-heading font-bold text-white mb-6">Contact for Professional Inquiries</h2>
+            <h2 class="text-3xl font-heading font-bold text-white mb-6">Let's Talk About How I Can Improve Your AI</h2>
             <p class="text-blue-100 text-lg mb-10">
-                Data privacy is paramount. Full CV available to authorized recruiters upon request.
+                Available for remote healthcare AI training, medical annotation, clinical data validation, and consulting roles.
             </p>
 
             <div class="bg-white rounded-lg p-8 shadow-2xl max-w-lg mx-auto">
-                <!-- Success Message (Hidden by default) -->
+                <!-- Success Message -->
                 <div id="success-message" class="hidden flex flex-col items-center justify-center py-8">
                     <div class="h-16 w-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
                         <i class="fa-solid fa-check text-2xl text-green-600"></i>
@@ -342,65 +539,78 @@
 
                 <!-- Form -->
                 <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                    <!-- Web3Forms Configuration -->
                     <input type="hidden" name="access_key" value="f4373079-8e8c-4e61-8185-63414b463401">
-                    <input type="hidden" name="subject" value="Resume Request - Canadian Clinical Utilization Review & Claims Adjudication Opportunity">
+                    <input type="hidden" name="subject" value="AI Training Inquiry - JoAnne Andrea Gomez, RN">
                     <input type="hidden" name="botcheck" class="hidden" style="display: none;">
                     
                     <div class="mb-4 text-left">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
-                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-corporateNavy" id="name" type="text" name="name" placeholder="Company Name" required>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-accentTeal" id="name" type="text" name="name" placeholder="Your Name or Company" required>
                     </div>
                     
                     <div class="mb-4 text-left">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
-                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-corporateNavy" id="email" type="email" name="email" placeholder="email@company.com" required>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-accentTeal" id="email" type="email" name="email" placeholder="email@company.com" required>
                     </div>
 
                     <div class="mb-6 text-left">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
-                        <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-corporateNavy" id="message" name="message" rows="3" placeholder="" required></textarea>
+                        <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-accentTeal" id="message" name="message" rows="3" placeholder="Tell me about the role or project..." required></textarea>
                     </div>
 
-                    <!-- Error Message (Hidden by default) -->
                     <div id="error-message" class="hidden mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded relative" role="alert">
                         <span class="block sm:inline">Something went wrong. Please try again.</span>
                     </div>
 
                     <button id="submit-btn" class="w-full bg-corporateNavy text-white font-bold py-3 px-4 rounded hover:bg-slate-800 transition duration-300 flex justify-center items-center" type="submit">
-                        <span id="btn-text">Send</span>
+                        <span id="btn-text">Send Message</span>
                         <i id="btn-icon" class="fa-solid fa-paper-plane ml-2"></i>
                     </button>
                 </form>
                 
-                <div class="mt-6 border-t pt-6 text-sm text-gray-500">
+                <div class="mt-6 border-t pt-6">
                     <p class="font-bold text-slate-900">JoAnne Andrea Gomez, RN</p>
-                    <p>Toronto, ON</p>
+                    <p class="text-sm text-gray-500">Toronto, ON | Available for Remote Work</p>
+                    <div class="flex justify-center gap-4 mt-3">
+                        <a href="https://medium.com/@msjag416" target="_blank" rel="noopener" class="text-gray-400 hover:text-corporateNavy transition-colors">
+                            <i class="fa-brands fa-medium text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/joanne-andrea-gomez" target="_blank" rel="noopener" class="text-gray-400 hover:text-corporateNavy transition-colors">
+                            <i class="fa-brands fa-linkedin text-xl"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <footer class="bg-slate-900 py-6 text-center">
-        <p class="text-slate-500 text-sm">&copy; <span id="copyright-year"></span> JoAnne Andrea Gomez. All Rights Reserved.</p>
+        <p class="text-slate-500 text-sm">&copy; <span id="copyright-year"></span> JoAnne Andrea Gomez, RN. All Rights Reserved.</p>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Automatic Year Update
+            // Year
             document.getElementById('copyright-year').textContent = new Date().getFullYear();
 
-            // Mobile Menu Logic
+            // Mobile Menu
             const mobileMenu = document.getElementById('mobile-menu');
-            const mobileLinks = mobileMenu.querySelectorAll('a');
-            
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
             });
 
-            // JavaScript Form Handling
+            // Scroll Fade-In Animation
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+            // Form Handling
             const form = document.getElementById('contact-form');
             const successMessage = document.getElementById('success-message');
             const errorMessage = document.getElementById('error-message');
@@ -410,36 +620,28 @@
 
             form.addEventListener('submit', function(e) {
                 e.preventDefault();
-                
-                // UI Loading State
                 submitBtn.disabled = true;
                 btnText.textContent = "Sending...";
                 btnIcon.classList.add('hidden');
                 errorMessage.classList.add('hidden');
 
-                const formData = new FormData(form);
-
                 fetch(form.action, {
                     method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
                 })
                 .then(response => {
                     if (response.ok) {
-                        // Success State
                         form.classList.add('hidden');
                         successMessage.classList.remove('hidden');
                     } else {
-                        // Error State
-                        throw new Error('Form submission failed');
+                        throw new Error('Failed');
                     }
                 })
-                .catch(error => {
+                .catch(() => {
                     errorMessage.classList.remove('hidden');
                     submitBtn.disabled = false;
-                    btnText.textContent = "Send";
+                    btnText.textContent = "Send Message";
                     btnIcon.classList.remove('hidden');
                 });
             });
